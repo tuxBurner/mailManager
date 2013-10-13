@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once 'config.php.dist';
+require_once 'config.php';
 if (isset(Config::$USERS) == false || count(Config::$USERS) == 0) {
     die('Need to configure users');
 }
