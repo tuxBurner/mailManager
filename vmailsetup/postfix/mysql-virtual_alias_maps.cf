@@ -1,0 +1,8 @@
+user = <mysqluser>
+password = <mysqlpass>
+dbname = <mysqldb>
+table = mail_virtual
+select_field = destination
+where_field = email
+additional_conditions = and destination <> '' and destination <> ' '
+hosts = 127.0.0.1 

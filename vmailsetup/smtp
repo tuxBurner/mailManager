@@ -1,0 +1,2 @@
+auth    required   pam_mysql.so user=<dbuser> passwd=<dbpass> host=127.0.0.1 db=<mysqldb> table=mail_users usercolumn=username passwdcolumn=password_enc crypt=1
+account sufficient pam_mysql.so user=<dbuser> passwd=<dbpass> host=127.0.0.1 db=<mysqldb> table=mail_users usercolumn=username passwdcolumn=password_enc crypt=1

@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5da7c634-5749-4afa-ac44-f0bc6c143a3c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/createPassword.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Actions.php" afterPath="$PROJECT_DIR$/Actions.php" />
+    <list default="true" id="5da7c634-5749-4afa-ac44-f0bc6c143a3c" name="Default" comment="Started adding mail server setup">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/courier/authdaemonrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/courier/authmodulelist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/courier/authmysqlrc.dpkg-dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/courier/authmysqlrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/courier/bd2466ef" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/postfix/dynamicmaps.cf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/courier/f0665ec9" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/courier/imapd-ssl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/courier/imapd.cnf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/courier/imapd.pem" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/courier/imapd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/courier/shared/index" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/postfix/main.cf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/postfix/master.cf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/postfix/mysql-check_helo_access.cf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/postfix/mysql-virtual_alias_maps.cf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/postfix/mysql-virtual_mailbox_domains.cf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/postfix/mysql-virtual_mailbox_maps.cf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/courier/pop3d-ssl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/courier/pop3d.cnf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/courier/pop3d.pem" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/courier/pop3d" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/postfix/post-install" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/postfix/postfix-files" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/postfix/postfix-script" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/smtp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/postfix/sasl/smtpd.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/courier/tls.cert.pem" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/postfix/ssl/tls.cert.pem" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/postfix/test/tls.cert.pem" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/courier/tls.key.pem" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/postfix/ssl/tls.key.pem" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vmailsetup/postfix/test/tls.key.pem" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Readme.md" afterPath="$PROJECT_DIR$/Readme.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mailManage.iws" />
@@ -20,11 +52,16 @@
     <file path="/main.js" changelist="5da7c634-5749-4afa-ac44-f0bc6c143a3c" time="1381675618332" ignored="false" />
     <file path="/sql_fixes.sql" changelist="5da7c634-5749-4afa-ac44-f0bc6c143a3c" time="1381683204236" ignored="false" />
     <file path="/changePassword.tpl" changelist="5da7c634-5749-4afa-ac44-f0bc6c143a3c" time="1381698617732" ignored="false" />
-    <file path="/Dummy.txt" changelist="5da7c634-5749-4afa-ac44-f0bc6c143a3c" time="1381700711961" ignored="false" />
+    <file path="/Dummy.txt" changelist="5da7c634-5749-4afa-ac44-f0bc6c143a3c" time="1381702482012" ignored="false" />
     <file path="/initial.sql" changelist="5da7c634-5749-4afa-ac44-f0bc6c143a3c" time="1381699969858" ignored="false" />
-    <file path="/Readme.md" changelist="5da7c634-5749-4afa-ac44-f0bc6c143a3c" time="1381700708149" ignored="false" />
+    <file path="/Readme.md" changelist="5da7c634-5749-4afa-ac44-f0bc6c143a3c" time="1381702468350" ignored="false" />
     <file path="/a.dummy" changelist="5da7c634-5749-4afa-ac44-f0bc6c143a3c" time="1381700420958" ignored="false" />
     <file path="/createPassword.php" changelist="5da7c634-5749-4afa-ac44-f0bc6c143a3c" time="1381701312234" ignored="false" />
+    <file path="/smtpd.conf" changelist="5da7c634-5749-4afa-ac44-f0bc6c143a3c" time="1381701726217" ignored="false" />
+    <file path="/main.cf" changelist="5da7c634-5749-4afa-ac44-f0bc6c143a3c" time="1381701766837" ignored="false" />
+    <file path="/mysql-check_helo_access.cf" changelist="5da7c634-5749-4afa-ac44-f0bc6c143a3c" time="1381701823082" ignored="false" />
+    <file path="/authmysqlrc" changelist="5da7c634-5749-4afa-ac44-f0bc6c143a3c" time="1381702127219" ignored="false" />
+    <file path="/smtp" changelist="5da7c634-5749-4afa-ac44-f0bc6c143a3c" time="1381702334513" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,99 +81,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="47" selection-start="1224" selection-end="1224" vertical-scroll-proportion="-25.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="changePassword.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/changePassword.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="44" selection-start="827" selection-end="827" vertical-scroll-proportion="-9.375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="displayDomain.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/displayDomain.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="40" selection-start="78" selection-end="78" vertical-scroll-proportion="-1.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="selectDomain.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/selectDomain.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="10" selection-start="0" selection-end="1422" vertical-scroll-proportion="-21.875">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Actions.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Actions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="279" selection-end="279" vertical-scroll-proportion="-11.875">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php.dist" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config.php.dist">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="44" selection-start="74" selection-end="142" vertical-scroll-proportion="0.13686131">
-              <folding>
-                <marker date="1381700399278" expanded="true" signature="277:316" placeholder=" name of the database user ..." />
-                <marker date="1381700399278" expanded="true" signature="359:385" placeholder="  db password ..." />
-                <marker date="1381700399278" expanded="true" signature="432:466" placeholder=" name of the database ..." />
-                <marker date="1381700399278" expanded="true" signature="504:538" placeholder=" host of the database ..." />
-                <marker date="1381700399278" expanded="true" signature="582:624" placeholder=" default root path for emails ..." />
-                <marker date="1381700399278" expanded="true" signature="678:714" placeholder=" uuid of the vmail user ..." />
-                <marker date="1381700399278" expanded="true" signature="752:789" placeholder=" uuid of the vmail group ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createPassword.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/createPassword.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="25" selection-start="239" selection-end="239" vertical-scroll-proportion="-7.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="84" selection-start="128" selection-end="128" vertical-scroll-proportion="-3.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="initial.sql" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql/initial.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="56" selection-start="1140" selection-end="1140" vertical-scroll-proportion="-18.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Readme.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Readme.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Readme.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="24" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
+            <state line="41" column="0" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.63286716">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="smtp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vmailsetup/smtp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="89" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -160,20 +117,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/main.tpl.html" />
-        <option value="$PROJECT_DIR$/bootstrap/main.js" />
-        <option value="$PROJECT_DIR$/sql_fixes.sql" />
-        <option value="$PROJECT_DIR$/templates/login.tpl" />
-        <option value="$PROJECT_DIR$/templates/changePassword.tpl" />
-        <option value="$PROJECT_DIR$/templates/main.tpl" />
         <option value="$PROJECT_DIR$/templates/displayDomain.tpl" />
         <option value="$PROJECT_DIR$/templates/selectDomain.tpl" />
         <option value="$PROJECT_DIR$/initial.sql" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/Readme.md" />
         <option value="$PROJECT_DIR$/Actions.php" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/createPassword.php" />
+        <option value="$PROJECT_DIR$/vmailsetup/postfix/sasl/smtpd.conf" />
+        <option value="$PROJECT_DIR$/vmailsetup/postfix/main.cf" />
+        <option value="$PROJECT_DIR$/vmailsetup/postfix/mysql-check_helo_access.cf" />
+        <option value="$PROJECT_DIR$/vmailsetup/postfix/mysql-virtual_alias_maps.cf" />
+        <option value="$PROJECT_DIR$/vmailsetup/postfix/mysql-virtual_mailbox_domains.cf" />
+        <option value="$PROJECT_DIR$/vmailsetup/postfix/mysql-virtual_mailbox_maps.cf" />
+        <option value="$PROJECT_DIR$/vmailsetup/courier/authmysqlrc" />
+        <option value="$PROJECT_DIR$/vmailsetup/smtp" />
+        <option value="$PROJECT_DIR$/Readme.md" />
       </list>
     </option>
   </component>
@@ -228,6 +187,56 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mailManage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mailManage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vmailsetup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mailManage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mailManage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vmailsetup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="postfix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mailManage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mailManage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vmailsetup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="courier" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -238,6 +247,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
@@ -294,31 +304,39 @@
       <created>1381700713093</created>
       <updated>1381700713093</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added password hashing">
+      <created>1381701383152</created>
+      <updated>1381701383152</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Started adding mail server setup">
+      <created>1381701550831</created>
+      <updated>1381701550831</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="33" width="1900" height="1040" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295964" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6704036" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295964" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6704036" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -363,7 +381,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added config.php to gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started adding mail server setup" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -380,114 +398,134 @@
     <MESSAGE value="Some Readme stuff" />
     <MESSAGE value="Woops" />
     <MESSAGE value="Added config.php to gitignore" />
+    <MESSAGE value="Added password hashing" />
+    <MESSAGE value="Started adding mail server setup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_4.php">
+    <entry file="file://$PROJECT_DIR$/vmailsetup/courier/shared/index">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="9" selection-start="7908" selection-end="7908" vertical-scroll-proportion="-12.041667">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql/sql_fixes.sql">
+    <entry file="file://$PROJECT_DIR$/vmailsetup/postfix/main.cf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="42" selection-start="47" selection-end="134" vertical-scroll-proportion="-0.6">
+        <state line="32" column="19" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.83916086">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.tpl">
+    <entry file="file://$PROJECT_DIR$/vmailsetup/courier/authdaemonrc">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="16" selection-start="0" selection-end="661" vertical-scroll-proportion="0.0">
+        <state line="69" column="0" selection-start="2675" selection-end="2675" vertical-scroll-proportion="0.9451554">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/main.tpl">
+    <entry file="file://$PROJECT_DIR$/vmailsetup/courier/authmodulelist">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="55" selection-start="945" selection-end="945" vertical-scroll-proportion="-17.5">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/displayDomain.tpl">
+    <entry file="file://$PROJECT_DIR$/vmailsetup/postfix/dynamicmaps.cf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="40" selection-start="78" selection-end="78" vertical-scroll-proportion="-1.25">
+        <state line="9" column="0" selection-start="373" selection-end="373" vertical-scroll-proportion="0.23601398">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/selectDomain.tpl">
+    <entry file="file://$PROJECT_DIR$/vmailsetup/postfix/mysql-check_helo_access.cf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="10" selection-start="0" selection-end="1422" vertical-scroll-proportion="-21.875">
+        <state line="2" column="9" selection-start="51" selection-end="60" vertical-scroll-proportion="0.052447554">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql/initial.sql">
+    <entry file="file://$PROJECT_DIR$/vmailsetup/courier/authmysqlrc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="56" selection-start="1140" selection-end="1140" vertical-scroll-proportion="-18.0">
+        <state line="4" column="24" selection-start="114" selection-end="114" vertical-scroll-proportion="0.10489511">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vmailsetup/courier/bd2466ef">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vmailsetup/courier/f0665ec9">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vmailsetup/courier/authmysqlrc.dpkg-dist">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="30.6">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vmailsetup/courier/imapd">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="233.72">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vmailsetup/courier/imapd.cnf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vmailsetup/courier/imapd.pem">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vmailsetup/courier/imapd-ssl">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="197" column="46" selection-start="6126" selection-end="6126" vertical-scroll-proportion="0.61608773">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vmailsetup/smtp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="89" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Readme.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
+        <state line="41" column="0" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.63286716">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="47" selection-start="1224" selection-end="1224" vertical-scroll-proportion="-25.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="84" selection-start="128" selection-end="128" vertical-scroll-proportion="-3.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Actions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="279" selection-end="279" vertical-scroll-proportion="-11.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/changePassword.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="44" selection-start="827" selection-end="827" vertical-scroll-proportion="-9.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/createPassword.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="239" selection-end="239" vertical-scroll-proportion="-7.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.php.dist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="44" selection-start="74" selection-end="142" vertical-scroll-proportion="0.13686131">
-          <folding>
-            <marker date="1381700399278" expanded="true" signature="277:316" placeholder=" name of the database user ..." />
-            <marker date="1381700399278" expanded="true" signature="359:385" placeholder="  db password ..." />
-            <marker date="1381700399278" expanded="true" signature="432:466" placeholder=" name of the database ..." />
-            <marker date="1381700399278" expanded="true" signature="504:538" placeholder=" host of the database ..." />
-            <marker date="1381700399278" expanded="true" signature="582:624" placeholder=" default root path for emails ..." />
-            <marker date="1381700399278" expanded="true" signature="678:714" placeholder=" uuid of the vmail user ..." />
-            <marker date="1381700399278" expanded="true" signature="752:789" placeholder=" uuid of the vmail group ..." />
-          </folding>
         </state>
       </provider>
     </entry>

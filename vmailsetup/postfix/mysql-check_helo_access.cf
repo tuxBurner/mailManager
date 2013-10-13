@@ -1,0 +1,7 @@
+user = <mysqluser>
+password = <mysqlpass>
+dbname = <mysqldb>
+table = panel_domains
+additional_conditions = LIMIT 1);
+query = SELECT 'REJECT You are not %s' FROM panel_domains WHERE panel_domains.domain=SUBSTRING_INDEX('%s', '.', -2)
+hosts = 127.0.0.1

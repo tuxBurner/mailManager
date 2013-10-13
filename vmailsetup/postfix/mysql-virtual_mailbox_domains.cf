@@ -1,0 +1,8 @@
+user = <mysqluser>
+password = <mysqlpass>
+dbname = <mysqldb>
+table = panel_domains
+select_field = domain
+where_field = domain
+additional_conditions = and isemaildomain = '1'
+hosts = 127.0.0.1 
