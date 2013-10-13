@@ -5,18 +5,39 @@ class Config
     /** @var array */
     public static $USERS = array('user' => 'pass');
 
+    /**
+     * name of the database user
+     */
     const DB_USER = 'mailtest';
 
+    /**
+     *  db password
+     */
     const DB_PASSWORD = 'mailtest';
 
+    /**
+     * name of the database
+     */
     const DB = 'mailtest';
 
+    /**
+     * host of the database
+     */
     const DB_HOST = 'localhost';
 
+    /**
+     * default root path for emails
+     */
     const MAIL_ROOT_PATH = '/_data/_mail';
 
+    /**
+     * uuid of the vmail user
+     */
     const MAIL_UID = 2000;
 
+    /**
+     * uuid of the vmail group
+     */
     CONST MAIL_GID = 2000;
 }
 
