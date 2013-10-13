@@ -19,7 +19,7 @@ class Actions
     {
         if (isset($_POST['userName']) == true && isset($_POST['password']) == true) {
             if (array_key_exists($_POST['userName'], Config::$USERS) == true) {
-                if (Config::$USERS[$_POST['userName']] == $_POST['password']) {
+                if (Config::$USERS[$_POST['userName']] == sha1($_POST['password'])) {
                     $_SESSION['user'] = $_POST['userName'];
                     return Actions::SELECT_DOMAIN;
                 }
