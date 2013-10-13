@@ -46,4 +46,7 @@ Database schema is located under: *sql/initial.sql*
 * service courier-pop-ssl start
 * service courier-pop start
 
+## Further links
+* https://help.ubuntu.com/community/PostfixCompleteVirtualMailSystemHowto
+
 

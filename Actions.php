@@ -45,7 +45,17 @@ class Actions
 
         /*$domainPath = Config::MAIL_ROOT_PATH .'/'.$_POST['domainName'];
         safe_exec('mkdir -p ' . escapeshellarg($domainPath));
-        safe_exec('chown -R ' . (int)Config::MAIL_UID.':'.(int)Config::MAIL_GID.' '.$domainPath);*/
+        safe_exec('chown -R ' . (int)Config::MAIL_UID.':'.(int)Config::MAIL_GID.' '.$domainPath);
+        maildirmake /home/vmail/domains/$DOMAIN/$USER/Maildir
+        chown -R vmail:vmail seppel@climbbook.de/
+        */
+
+        $domainPath = Config::MAIL_ROOT_PATH .'/'.$_POST['domainName'];
+        mkdir($domainPath,0777);
+        chown($domainPath,"tuxburner");
+        ///shell_exec('mkdir -p ' . escapeshellarg($domainPath));
+        //shell_exec('chown -R ' . (int)Config::MAIL_UID.':'.(int)Config::MAIL_GID.' '.$domainPath);
+        //echo 'chown -R ' . (int)Config::MAIL_UID.':'.(int)Config::MAIL_GID.' '.$domainPath;
 
 
         $_GET['domain'] = $_POST['domainName'];
