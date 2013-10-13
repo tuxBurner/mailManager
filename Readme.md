@@ -39,11 +39,11 @@ Database schema is located under: *sql/initial.sql*
 * copy  vmailsetup/smtp to /etc/pam.d/smtp
 * adduser postfix sasl
 * sql/initial.sql mit db user imporieren
-*service postfix start
-*service courier-authdaemon start
-*service courier-imap-ssl start
-*service courier-imap start
-*service courier-pop-ssl start
-*service courier-pop start
+* service postfix start
+* service courier-authdaemon start
+* service courier-imap-ssl start
+* service courier-imap start
+* service courier-pop-ssl start
+* service courier-pop start
 
 
