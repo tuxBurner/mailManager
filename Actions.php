@@ -41,6 +41,13 @@ class Actions
             $query->bind_param('s', $_POST['domainName']);
             $query->execute();
         }
+
+
+        /*$domainPath = Config::MAIL_ROOT_PATH .'/'.$_POST['domainName'];
+        safe_exec('mkdir -p ' . escapeshellarg($domainPath));
+        safe_exec('chown -R ' . (int)Config::MAIL_UID.':'.(int)Config::MAIL_GID.' '.$domainPath);*/
+
+
         $_GET['domain'] = $_POST['domainName'];
         return Actions::DISPLAY_DOMAIN;
     }
@@ -71,7 +78,7 @@ class Actions
             if ($_POST['password'] == $_POST['rePassword']) {
                 $email = $_POST['userName'] . '@' . $_GET['domain'];
                 $maildir = $_GET['domain'] . '/' . $email . '/';
-                $stmt = $mysqli->prepare("INSERT INTO mail_users (email,username,password_enc,uid,gid,homedir,maildir) VALUES (?,?,ENCRYPT(?)," . Config::MAIL_UID . "," . Config::MAIL_GID . ",' " . Config::MAIL_ROOT_PATH . "',?)");
+                $stmt = $mysqli->prepare("INSERT INTO mail_users (email,username,password_enc,uid,gid,homedir,maildir) VALUES (?,?,ENCRYPT(?)," . Config::MAIL_UID . "," . Config::MAIL_GID . ",'" . Config::MAIL_ROOT_PATH . "',?)");
                 $email = $_POST['userName'] . '@' . $_GET['domain'];
                 $stmt->bind_param('ssss', $email,$email,$_POST['password'],$maildir);
                 $stmt->execute();
