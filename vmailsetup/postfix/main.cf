@@ -1,12 +1,27 @@
-smtpd_banner = $myhostname ESMTP $mail_name (Debian/GNU)
+smtpd_banner = $myhostname ESMTP
 biff = no
 append_dot_mydomain = no
-myhostname = <domain>
-mydomain = <domain>
+# dieser Wert wird zusammen mit HELO/EHLO bei fremden Servern benutzt (MX Record)
+myhostname = monkeydev.de
+# der Domain-Name des Systems (ohne Subdomain)
+mydomain = monkeydev.de
+# dieser Wert wird benutzt, um lokale E-Mails mit korrektem Domain-Part zu versehen (e.g. www-data@example.com)
+#myorigin = $mydomain
 mydestination = $myhostname $mydomain localhost localhost.$mydomain
 mynetworks = 127.0.0.0/8
 alias_maps = $alias_database
-smtpd_recipient_restrictions = permit_mynetworks permit_sasl_authenticated reject_unauth_destination
+smtpd_recipient_restrictions = 
+      permit_mynetworks 
+      permit_sasl_authenticated 
+      reject_unauth_destination
+
+smtpd_relay_restrictions =
+	permit_mynetworks
+	permit_sasl_authenticated
+	reject_unauth_destination
+      
+
+#virtual mailbox settings
 virtual_mailbox_base = /_data/_mail
 virtual_mailbox_maps = mysql:/etc/postfix/mysql-virtual_mailbox_maps.cf
 virtual_mailbox_domains = mysql:/etc/postfix/mysql-virtual_mailbox_domains.cf
@@ -14,6 +29,8 @@ virtual_alias_domains =
 virtual_alias_maps = mysql:/etc/postfix/mysql-virtual_alias_maps.cf
 virtual_uid_maps = static:2000
 virtual_gid_maps = static:2000
+
+# SASL Auth
 smtpd_sasl_auth_enable = yes
 smtpd_sasl_local_domain = $myhostname
 smtpd_sasl_security_options = noanonymous
@@ -27,16 +44,17 @@ smtp_tls_note_starttls_offer = yes
 smtpd_use_tls = yes
 smtpd_tls_key_file = /etc/postfix/test/tls.key.pem
 smtpd_tls_cert_file = /etc/postfix/test/tls.cert.pem
-#smtpd_tls_CAFile = /path/to/smtpd.pem
-smtpd_tls_loglevel = 0
+smtpd_tls_loglevel = 0 
 smtpd_tls_received_header = yes
 smtpd_tls_session_cache_timeout = 3600s
 tls_random_source = dev:/dev/urandom
 
 smtpd_helo_required = yes
-smtpd_helo_restrictions =	permit_mynetworks
+smtpd_helo_restrictions = 
+        permit_mynetworks
 	permit_tls_clientcerts
 	reject_invalid_hostname
-	warn_if_reject reject_non_fqdn_hostname
+	warn_if_reject 
+        reject_non_fqdn_hostname
 	reject_unauth_pipelining
 	check_helo_access mysql:/etc/postfix/mysql-check_helo_access.cf

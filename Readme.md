@@ -39,14 +39,18 @@ Database schema is located under: *sql/initial.sql*
 * copy  vmailsetup/smtp to /etc/pam.d/smtp
 * adduser postfix sasl
 * sql/initial.sql mit db user imporieren
+* copy /etc/default/saslauthd to /etc/default/saslauthd.bak
+* copy vmailsetup/saslauthd to /etc/default/
 * service postfix start
 * service courier-authdaemon start
 * service courier-imap-ssl start
 * service courier-imap start
 * service courier-pop-ssl start
 * service courier-pop start
+* service saslauthd start
 
 ## Further links
 * https://help.ubuntu.com/community/PostfixCompleteVirtualMailSystemHowto
+* http://wiki.nefarius.at/linux/der_perfekte_mail-server
 
 
