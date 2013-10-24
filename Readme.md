@@ -12,6 +12,9 @@ This is a simple php script which can be used to manage email addresses for a vm
 ## Database
 Database schema is located under: *sql/initial.sql*
 
+## cronjob
+Add mailManageCron.php to a cron where user has rights to set vmail uid and guid
+
 ## Installing a vmail server under Ubuntu
 
 * aptitude install postfix postfix-mysql Alles mit Ok einfach weiter
