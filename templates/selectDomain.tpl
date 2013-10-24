@@ -3,6 +3,7 @@
         <div class="well">
             <h2>Select a domain</h2>
 
+            {if $DOMAINS|count != 0}
             <form role="form" method="GET" action="index.php" class="form-inline">
                 <input type="hidden" name="action" value="displayDomain"/>
 
@@ -15,6 +16,11 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Select</button>
             </form>
+            {else}
+                <div class="alert alert-info">
+                    No domains found.
+                </div>
+            {/if}
         </div>
     </div>
 

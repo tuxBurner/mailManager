@@ -84,26 +84,24 @@ $content = '';
 
 switch ($_GET['action']) {
     case Actions::SELECT_DOMAIN:
-        $domains = array();
-        $domainRes = $mysqli->query('SELECT domain FROM panel_domains WHERE isemaildomain=1 ORDER BY domain DESC');
-        for ($row_no = $domainRes->num_rows - 1; $row_no >= 0; $row_no--) {
-            $domainRes->data_seek($row_no);
-            $row = $domainRes->fetch_assoc();
-            $domains[] = $row;
-        }
+        $domains = Actions::getDomains($mysqli);
         $smarty->assign('DOMAINS', $domains);
         $content = $smarty->fetch('selectDomain.tpl');
         break;
     case Actions::DISPLAY_DOMAIN:
-        $mails = array();
-        //$query = mysqli_escape_string($mysqli,);
-        $mailRes = $mysqli->query("SELECT username,homedir,maildir FROM mail_users WHERE username LIKE '%@".mysqli_escape_string($mysqli,$_GET['domain'])."' ORDER BY username DESC");
-        for ($row_no = $mailRes->num_rows - 1; $row_no >= 0; $row_no--) {
-            $mailRes->data_seek($row_no);
-            $row = $mailRes->fetch_assoc();
-            $mails[] = $row;
-        }
+        $mails = Actions::getEmails($mysqli,$_GET['domain']);
         $smarty->assign('MAILS', $mails);
+
+        //check if the domain path exists
+        $domainPathExists = Actions::checkIfDomainPathExists($_GET['domain']);
+        $smarty->assign('DOMAIN_PATH_EXISTS',$domainPathExists);
+
+        if($domainPathExists == false) {
+          $domainPath = Actions::createDomainPath($_GET['domain']);
+          $smarty->assign('DOMAIN_PATH',$domainPath);
+        }
+
+
         $content = $smarty->fetch('displayDomain.tpl');
         break;
     case Actions::PASSWORD:

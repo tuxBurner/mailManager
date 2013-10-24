@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2013-10-13 23:24:19
+<?php /* Smarty version Smarty-3.1.15, created on 2013-10-24 09:41:42
          compiled from "templates/displayDomain.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:43701810525aa351a68119-12854243%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4d53f2d9fb2f99984dd0f2f4316424ae8bb314f0' => 
     array (
       0 => 'templates/displayDomain.tpl',
-      1 => 1381699457,
+      1 => 1382607698,
       2 => 'file',
     ),
   ),
@@ -19,6 +19,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_525aa351a75375_83458731',
   'variables' => 
   array (
+    'DOMAIN_PATH_EXISTS' => 0,
+    'DOMAIN_PATH' => 0,
     'MAILS' => 0,
     'mail' => 0,
   ),
@@ -32,6 +34,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
        onclick="return confirm('Delete domain: <?php echo $_GET['domain'];?>
  ?');">Delete</a>
 </h1>
+
+<?php if ($_smarty_tpl->tpl_vars['DOMAIN_PATH_EXISTS']->value==false) {?>
+    <div class="alert alert-danger">Domainpath: <strong><?php echo $_smarty_tpl->tpl_vars['DOMAIN_PATH']->value;?>
+</strong> does not exists. Will be created by cronjob.</div>
+<?php }?>
 
 <div class="well">
     <h2>Add new mail</h2>
@@ -70,6 +77,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <tr>
                 <th>Mail</th>
                 <th>Path</th>
+                <th>Ready</th>
                 <th>Action</th>
             </tr>
             </thead>
@@ -82,9 +90,15 @@ $_smarty_tpl->tpl_vars['mail']->_loop = true;
                     <tr>
                         <td><?php echo $_smarty_tpl->tpl_vars['mail']->value['username'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['mail']->value['homedir'];?>
-/<?php echo $_smarty_tpl->tpl_vars['mail']->value['maildir'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['mail']->value['DIR'];?>
 </td>
+                        <td>
+                            <?php if ($_smarty_tpl->tpl_vars['mail']->value['DIR_EXISTS']==false) {?>
+                              <span class="label label-danger"><i class="glyphicon glyphicon-unchecked"></i></span>
+                            <?php } else { ?>
+                              <span class="label label-success"><i class="glyphicon glyphicon-check"></i></span>
+                            <?php }?>
+                        </td>
                         <td>
                             <a class="btn btn-danger"
                                href="?doAction=deleteMailAddr&domain=<?php echo $_GET['domain'];?>

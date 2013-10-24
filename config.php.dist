@@ -39,5 +39,10 @@ class Config
      * uuid of the vmail group
      */
     CONST MAIL_GID = 2000;
+
+    /**
+     * command for making the maildir
+     */
+     CONST MAIL_DIRMAKE_CMD = "maildirmake.courier";
 }
 

@@ -4,6 +4,10 @@
        onclick="return confirm('Delete domain: {$smarty.get.domain} ?');">Delete</a>
 </h1>
 
+{if $DOMAIN_PATH_EXISTS == false}
+    <div class="alert alert-danger">Domainpath: <strong>{$DOMAIN_PATH}</strong> does not exists. Will be created by cronjob.</div>
+{/if}
+
 <div class="well">
     <h2>Add new mail</h2>
 
@@ -38,6 +42,7 @@
             <tr>
                 <th>Mail</th>
                 <th>Path</th>
+                <th>Ready</th>
                 <th>Action</th>
             </tr>
             </thead>
@@ -45,7 +50,14 @@
                 {foreach $MAILS as $mail}
                     <tr>
                         <td>{$mail.username}</td>
-                        <td>{$mail.homedir}/{$mail.maildir}</td>
+                        <td>{$mail.DIR}</td>
+                        <td>
+                            {if $mail.DIR_EXISTS == false}
+                              <span class="label label-danger"><i class="glyphicon glyphicon-unchecked"></i></span>
+                            {else}
+                              <span class="label label-success"><i class="glyphicon glyphicon-check"></i></span>
+                            {/if}
+                        </td>
                         <td>
                             <a class="btn btn-danger"
                                href="?doAction=deleteMailAddr&domain={$smarty.get.domain}&mail={$mail.username}"

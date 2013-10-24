@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2013-10-13 23:26:15
+<?php /* Smarty version Smarty-3.1.15, created on 2013-10-24 09:19:35
          compiled from "templates/selectDomain.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:65267748525a981363c9c9-20729157%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8ce9b23bb7f72320095032a32fc13d44a04aeca6' => 
     array (
       0 => 'templates/selectDomain.tpl',
-      1 => 1381699566,
+      1 => 1382606371,
       2 => 'file',
     ),
   ),
@@ -29,6 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <div class="well">
             <h2>Select a domain</h2>
 
+            <?php if (count($_smarty_tpl->tpl_vars['DOMAINS']->value)!=0) {?>
             <form role="form" method="GET" action="index.php" class="form-inline">
                 <input type="hidden" name="action" value="displayDomain"/>
 
@@ -47,6 +48,11 @@ $_smarty_tpl->tpl_vars['domain']->_loop = true;
                 </div>
                 <button type="submit" class="btn btn-primary">Select</button>
             </form>
+            <?php } else { ?>
+                <div class="alert alert-info">
+                    No domains found.
+                </div>
+            <?php }?>
         </div>
     </div>
 
